@@ -1,0 +1,13 @@
+$pid = $_REQUEST['product_id'];
+$query1 = "SELECT * FROM products WHERE id = '"
+  . $pid . "'";
+ 
+$result = mysql_db_query($dbname, $query1) or die("Failed Query of " . $query1);
+$thisrow=mysql_fetch_row($result);
+if ($thisrow) {
+  echo "The Product was found.";
+}
+else
+{
+  echo "The Product was not found.";
+}
