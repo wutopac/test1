@@ -1,0 +1,13 @@
+<html>
+<head></head>
+<body>
+<script>
+Function handoff(data) {
+  o = document.write(window.opener.document.forms[0].<%=
+     Server.HTMLEncode(Request("FooBar"))
+  %>
+  o.fireEvent("onchange");
+  o.focus;
+  self.close();
+}
+</script>
