@@ -1,0 +1,7 @@
+If results = 0 Then
+  response.write("<p>Could not find: ")
+  response.write(request.getParameter("search_str") _
+  + "</p>")
+Else
+ printResults(results)
+End If
